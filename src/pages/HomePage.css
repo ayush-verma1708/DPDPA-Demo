@@ -1,0 +1,14 @@
+/* src/pages/HomePage.css */
+.home-page {
+    display: flex;
+  }
+  
+  .main-content {
+    margin-left: 270px; /* Adjust this margin to match sidebar width */
+    padding: 20px;
+    width: calc(100% - 270px); /* Adjust this to match sidebar width */
+    background-color: #f9f9f9;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
