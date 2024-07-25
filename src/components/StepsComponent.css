@@ -1,0 +1,274 @@
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  position: relative;
+  background-color: #ffffff; /* Background color for the component */
+  padding: 20px; /* Padding around the content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 800px; /* Max width to limit size on larger screens */
+  margin: 20px auto; /* Center align and add margin */
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.steps-header {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.step {
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.step.active {
+  background-color: #ffa07a;
+}
+
+.steps-content {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.steps-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.steps-image {
+  flex: 0 0 150px;
+}
+
+.steps-image img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.steps-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.steps-navigation button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.steps-navigation button.previous {
+  background-color: #3cb371; /* Green color for previous button */
+  color: #fff;
+}
+
+.steps-navigation button.next {
+  background-color: #1e90ff; /* Blue color for next button */
+  color: #fff;
+}
+
+.steps-navigation button:hover {
+  opacity: 0.8;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.button {
+  position: relative;
+  width: 4em;
+  height: 4em;
+  border: none;
+  background: rgba(180, 83, 107, 0.11);
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+
+.X,
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -70%;
+  left: 50%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  background-color: rgb(19, 22, 24);
+  color: rgb(187, 229, 236);
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.button:hover {
+  background-color: rgb(211, 21, 21);
+}
+
+.button:active {
+  background-color: rgb(130, 0, 0);
+}
+
+.button:hover > .close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .steps-content {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+
+  .steps-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .steps-navigation {
+    width: 95%;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .button {
+    position: relative;
+    width: 4em;
+    height: 4em;
+    border: none;
+    background: rgba(180, 83, 107, 0.11);
+    border-radius: 5px;
+    transition: background 0.5s;
+  }
+
+  .X,
+  .Y {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 1.5px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .Y {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+
+  .close {
+    position: absolute;
+    display: flex;
+    padding: 0.8rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    top: -70%;
+    left: 50%;
+    width: 3em;
+    height: 1.7em;
+    font-size: 12px;
+    background-color: rgb(19, 22, 24);
+    color: rgb(187, 229, 236);
+    border: none;
+    border-radius: 3px;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .button:hover {
+    background-color: rgb(211, 21, 21);
+  }
+
+  .button:active {
+    background-color: rgb(130, 0, 0);
+  }
+
+  .button:hover > .close {
+    animation: close 0.2s forwards 0.25s;
+  }
+
+  @keyframes close {
+    100% {
+      opacity: 1;
+    }
+  }
+}

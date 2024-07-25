@@ -1,0 +1,14 @@
+/* src/components/Step.css */
+.step {
+    margin: 2rem 0;
+  }
+  
+  .step h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .step ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  

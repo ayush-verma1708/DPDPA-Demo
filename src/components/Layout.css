@@ -1,0 +1,48 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Adjust height as per your requirement */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.sidebar-open .main-content {
+  margin-left: 250px; /* Adjust based on your sidebar width */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #ff8383;
+  color: white;
+}
+
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  gap: 1rem;
+}
